@@ -1,0 +1,16 @@
+@import "_variables.scss";
+
+.title-wrapper {
+  font-size: 32px;
+  font-weight: map-get($font-weights, extrabold);
+  @include mobile {
+    font-size: 24px;
+  }
+  .span-my {
+    color: $red;
+  }
+  .span-news {
+    margin-right: 43px;
+    color: $black;
+  }
+}

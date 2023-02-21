@@ -1,0 +1,34 @@
+@import "_variables.scss";
+
+.modal {
+  display: none;
+  @include mobile {
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.burger-positioner {
+  position: absolute;
+  top: 28px;
+  right: 18px;
+}
+
+.modal-title {
+  margin-bottom: 64px;
+  font-weight: map-get($font-weights, extrabold);
+  font-size: 32px;
+  .span-my {
+    color: $red;
+  }
+  .span-news {
+    color: $black;
+  }
+}

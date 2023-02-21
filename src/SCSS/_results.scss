@@ -1,0 +1,44 @@
+@import "_variables.scss";
+
+.results-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 22px;
+  padding: 16px;
+  width: 1039px;
+  @include mobile {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 321px;
+  }
+}
+.results-wrapper {
+  border-top: 1px solid rgba(151, 151, 151, 0.1);
+  padding-top: 25px;
+  &-heading {
+    margin-left: 16px;
+    color: $black;
+    @include mobile {
+      display: none;
+    }
+  }
+  @include mobile {
+    border: none;
+  }
+}
+
+.nav-displayer {
+  @include mobile {
+    display: none;
+  }
+}
+
+.favorites-heading {
+  margin-left: 16px;
+  color: $black;
+  @include mobile {
+    margin-bottom: 25px;
+  }
+}

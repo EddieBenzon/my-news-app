@@ -1,0 +1,27 @@
+@import "_variables.scss";
+
+.search-bar {
+  padding: 35px 0px 28px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  background-color: $gray;
+}
+
+.main-input-wrapper {
+  width: 100%;
+  max-width: 903px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    font-size: 24px;
+    width: 321px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

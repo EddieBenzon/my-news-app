@@ -1,0 +1,88 @@
+@import "_variables.scss";
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 321px;
+  height: 280px;
+  border-radius: 8px;
+
+  .button-add {
+    padding: 6px 10px;
+    font-family: "Inter", sans-serif;
+    background-color: rgb(35, 179, 59);
+    color: white;
+    align-self: flex-end;
+    margin-right: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 4px;
+    transition-property: background-color, width;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(77, 204, 98);
+    }
+  }
+  .button-remove {
+    padding: 6px 10px;
+    font-family: "Inter", sans-serif;
+    background-color: rgb(209, 23, 48);
+    color: white;
+    align-self: flex-end;
+    margin-right: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 4px;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(255, 31, 61);
+    }
+  }
+}
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+
+  height: 112px;
+  background-color: white;
+  z-index: 1;
+
+  & h3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 20px;
+    height: 40px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    font-weight: map-get($font-weights, regular);
+    color: black;
+  }
+  .source-paragraph {
+    font-size: 10px;
+    color: $blue;
+    font-weight: map-get($font-weights, bold);
+  }
+  .author-paragraph {
+    font-size: 12px;
+    font-weight: map-get($font-weights, light);
+    color: $black;
+    align-self: flex-end;
+  }
+}

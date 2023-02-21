@@ -1,0 +1,36 @@
+@import "_variables.scss";
+
+.mobile-nav-wrapper {
+  display: none;
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $gray;
+  }
+
+  .mobile-link {
+    font-family: "Inter", sans-serif;
+    font-weight: map-get($font-weights, mediumplus);
+    text-align: center;
+    width: 102px;
+    background-color: $gray;
+    color: $black;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+
+    &-active {
+      @extend .mobile-link;
+      background-color: rgba(187, 30, 30, 0.1);
+      color: $red;
+    }
+  }
+}
+
+.mobile-nav-wrapper-hidden {
+  display: none;
+}
